@@ -1,13 +1,13 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import InfoCardPessoa from "./InfoCardPessoa";
 
-export default function CardPessoa() {
+export default function CardPessoa({ pessoa, irAteDetalhes }) {
   return (
-    <View style={styles.container}>
-      <InfoCardPessoa label={"Nome"} info={"Augusto Kruger Ortolan"} />
-      <InfoCardPessoa label={"Idade"} info={23} />
-    </View>
+    <TouchableOpacity style={styles.container} onPress={irAteDetalhes}>
+      <InfoCardPessoa label={"Nome"} info={pessoa.item.name.first} />
+      <InfoCardPessoa label={"Idade"} info={pessoa.item.dob.age} />
+    </TouchableOpacity>
   );
 }
 
@@ -19,5 +19,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: "#fff",
     padding: 10,
+    marginBottom: 10,
   },
 });
