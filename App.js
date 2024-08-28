@@ -9,7 +9,11 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerTitleAlign: "center",
+        }}
+      >
         <Stack.Screen
           component={Home}
           name="Home"
@@ -22,7 +26,6 @@ export default function App() {
           name="Pessoas"
           options={{
             title: "Lista de pessoas",
-            headerTitleAlign: "center",
           }}
         />
         <Stack.Screen component={DetalhesPessoa} name="DetalhesPessoa" />
