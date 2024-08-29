@@ -11,7 +11,7 @@ export default function Home({ navigation }) {
         <Text style={styles.buttonText}>Lista de Pessoas</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={irParaListaDePessoas}>
+      <TouchableOpacity style={styles.button} onPress={irParaListaDePokemon}>
         <Text style={styles.buttonText}>Lista de Pokemon</Text>
       </TouchableOpacity>
     </View>
